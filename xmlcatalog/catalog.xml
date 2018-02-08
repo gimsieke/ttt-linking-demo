@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <rewriteURI uriStartString="http://this.transpect.io/" rewritePrefix="../"/>
+  <nextCatalog catalog="../xproc-util/xmlcatalog/catalog.xml"/>
+  <nextCatalog catalog="../xslt-util/xmlcatalog/catalog.xml"/>
+  <nextCatalog catalog="../tokenized-to-tree/xmlcatalog/catalog.xml"/>
+  
+</catalog>
