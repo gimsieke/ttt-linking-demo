@@ -1,6 +1,18 @@
 # ttt-linking-demo
 A demo application for the tokenized-to-tree XProc/XSLT library
 
+## Getting the code
+
+```
+git clone https://github.com/gimsieke/ttt-linking-demo --recursive
+```
+
+and maybe also (otherwise the Calabash submodule’s submodules might not be checked out):
+
+```
+git submodule update --init --recursive
+```
+
 ## Invocation
 
 This is for Bash (non-MacOS X):
