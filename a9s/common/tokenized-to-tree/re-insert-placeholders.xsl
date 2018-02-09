@@ -8,7 +8,7 @@
 
   <xsl:import href="http://transpect.io/tokenized-to-tree/xsl/re-insert-placeholders.xsl"/>  
 
-  <xsl:template match="@xml:lang" mode="#default in-patched"/>
+  <xsl:template match="@xml:lang" mode="in-patched"/>
 
   <xsl:template match="/" mode="#default">
     <xsl:text>&#xa;</xsl:text>

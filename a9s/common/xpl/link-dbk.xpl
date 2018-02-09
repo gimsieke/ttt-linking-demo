@@ -31,6 +31,7 @@
   <p:import href="http://transpect.io/tokenized-to-tree/xpl/ttt-3-integrate-tokenizer-results.xpl"/>
   <p:import href="http://transpect.io/tokenized-to-tree/xpl/ttt-5-expand-placeholders.xpl"/>
   <p:import href="http://transpect.io/xproc-util/store-debug/xpl/store-debug.xpl"/>
+  <p:import href="http://transpect.io/xproc-util/re-attach-out-of-doc-PIs/xpl/re-attach-out-of-doc-PIs.xpl"/>
   <p:import href="http://xmlcalabash.com/extension/steps/library-1.0.xpl"/>
 
   <p:xslt name="create-target-list">

@@ -32,28 +32,7 @@
         <xsl:with-param name="string" select="$content"/>
       </xsl:call-template>
     </xsl:variable>
-    <xsl:variable name="only-for-other-modul-ids" as="element(ttt:tokens)*">
-      <!-- We need to take these into account because: 
-        Imagine both the text line and the reflist contain both terms,
-        "Cinnarizin <i>CRS</i>" and "Cinnarizin".
-        "Cinnarizin <i>CRS</i>" is restricted, by ID, to only
-        become a link in a certain document (that is different from the current).
-        Then the "Cinnarizin" in "Cinnarizin <i>CRS</i>" shouldn’t become a link,
-        either. A standalone "Cinnarizin", however, should become a link.
-        This variable will be used in determining which possible matches
-        to consider when calculating whether a given string in the current
-        document, such as "Cinnarizin", is contained in another string, such 
-        as "Cinnarizin <i>CRS</i>", that would also match at the same location
-        if it were allowed to match in the current document. 
-        Yes, it’s complicated.
-      --> 
-      <xsl:call-template name="tag-each-match-in-a-distinct-tokens-element">
-        <xsl:with-param name="reflist-items"
-          select="$normalized-reflist/dbk:titles/dbk:title[not($own-id = @xml:id)]
-                                                          [not(@regex = key('by-id', $own-id, $normalized-reflist)/@regex)]"/>
-        <xsl:with-param name="string" select="$content"/>
-      </xsl:call-template>
-    </xsl:variable>
+    
     
     <xsl:if test="count($count) ge 1">
       <!-- We don’t do a distinct XSLT pass over the whole document. This makes debugging a bit harder.
@@ -68,7 +47,7 @@ Eliminate:</xsl:comment>-->
         ttt:t elements with ttt:tokens will be dissolved. -->
         <xsl:for-each select="$count">
           <xsl:apply-templates select="." mode="eliminate-shorter-tokens">
-            <xsl:with-param name="others" select="($count union $only-for-other-modul-ids) except ." tunnel="yes" as="element(ttt:tokens)*"/>
+            <xsl:with-param name="others" select="$count except ." tunnel="yes" as="element(ttt:tokens)*"/>
           </xsl:apply-templates>
         </xsl:for-each>
       </xsl:variable>
@@ -93,7 +72,8 @@ Merge:</xsl:comment>-->
         </xsl:choose>
       </xsl:variable>
       <xsl:variable name="quotes" as="element(ttt:tokens)*">
-        <xsl:apply-templates select="$merged" mode="quotes"/>
+        <!--<xsl:apply-templates select="$merged" mode="quotes"/>-->
+        <xsl:sequence select="$merged"></xsl:sequence>
       </xsl:variable>
       <xsl:apply-templates select="$quotes" mode="count"/>
     </xsl:if>
