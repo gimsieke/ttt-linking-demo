@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<book xmlns="http://docbook.org/ns/docbook"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1"
+  xml:lang="en">
+  <info>
+    <title>Intra-document linking example</title>
+    <abstract>
+      <para>The pipeline inserts links into chapter contents when they 
+        match the headings of other chapters. It splits existing tagging
+      if necessary, and it ignores things like soft hyphens, non-breaking 
+      spaces, or processing instructions for string-matching purposes.</para>
+    </abstract>
+  </info>
+  <chapter xml:id="co2">
+    <title>CO<subscript>2</subscript></title>
+    <para>… will be discussed in the chapter on
+        “CO<subscript>2</subscript>-in&#xad;duced global
+      warming.” Please note the soft hyphen that needs to 
+    be ignored.</para>
+    <para>For reasons not explained we refer to another
+      chapter <emphasis>that is actually about <phrase
+          role="smallcaps">L</phrase>-glucose</emphasis>
+        (C<subscript>6</subscript><?tex \break 
+        ?>H<subscript>12</subscript>O<subscript>6</subscript>),
+      hoping that it will still be linked despite this
+      paragraph’s italicization that overlaps with the
+      term. It also contains a processing instruction that should
+    still be present in the output.</para>
+  </chapter>
+  <chapter xml:id="co2-induced_global_warming">
+    <title>CO<subscript>2</subscript>-Induced Global
+      Warming</title>
+    <para>As seen in the chapter on
+        CO<subscript>2</subscript>, …</para>
+  </chapter>
+  <chapter xml:id="l-glucose">
+    <title><phrase role="smallcaps">L</phrase>-Glucose
+        (C<subscript>6</subscript>H<subscript>12</subscript>O<subscript>6</subscript>)</title>
+    <para>Description of this kind of sugar.</para>
+  </chapter>
+</book>
