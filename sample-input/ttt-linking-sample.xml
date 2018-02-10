@@ -15,8 +15,11 @@
     <title>CO<subscript>2</subscript></title>
     <para>… will be discussed in the chapter on
         “CO<subscript>2</subscript>-in&#xad;duced global
-      warming.” Please note the soft hyphen that needs to 
-    be ignored.</para>
+      warming.”<footnote>
+        <para>Please note the soft hyphen that needs to be
+          ignored for matching purposes, but not omitted in
+          the result.</para>
+      </footnote></para>
     <para>For reasons not explained we refer to another
       chapter <emphasis>that is actually about <phrase
           role="smallcaps">L</phrase>-glucose</emphasis>
@@ -37,5 +40,11 @@
     <title><phrase role="smallcaps">L</phrase>-Glucose
         (C<subscript>6</subscript>H<subscript>12</subscript>O<subscript>6</subscript>)</title>
     <para>Description of this kind of sugar.</para>
+    <para>Test whether 
+        <emphasis>CO<subscript>2</subscript>-induced 
+          global warming</emphasis> will link 
+      to the longer headword or only to 
+      CO<subscript>2</subscript> 
+      (which would be wrong).</para>
   </chapter>
 </book>
