@@ -14,12 +14,12 @@
   <chapter xml:id="co2">
     <title>CO<subscript>2</subscript></title>
     <para>… will be discussed in the chapter on
-        “CO<subscript>2</subscript>-in&#xad;duced global
-      warming.”<footnote>
+        “CO<subscript>2</subscript>-in&#xad;duced<footnote>
         <para>Please note the soft hyphen that needs to be
           ignored for matching purposes, but not omitted in
           the result.</para>
-      </footnote></para>
+      </footnote> global
+      warming.”</para>
     <para>For reasons not explained we refer to another
       chapter <emphasis>that is actually about <phrase
           role="smallcaps">L</phrase>-glucose</emphasis>
